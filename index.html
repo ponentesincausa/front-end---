@@ -19,7 +19,7 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+        <script src="http://code.jquery.com/jquery.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -277,7 +277,27 @@
     .breadcrumb>.active {color: rgba(255, 255, 255, 1);}
     .breadcrumb>li+li:before {color: rgba(204, 204, 204, 1); content: "\002F\002F\00a0";}
     </style>
+    <?php
 
+header('Content-type: application/json');
+echo file_get_contents("http://disfuncionarios.org:3000/api/zone");
+
+?>
+
+   <script>
+
+
+
+$.get( "http://disfuncionarios.org:3000/api/zone", function() {
+    alert( "Funcionó" );
+  })
+  .done(function() {
+    alert( "También sirve para saber que funcionó" );
+  })
+  .fail(function() {
+    alert( "Ha ocurrido un error" );
+  });
+   </script>
 
 </head>
 
@@ -345,6 +365,9 @@
             </div>
         </div>
         <!-- /.row -->
+
+
+
 
 
 
