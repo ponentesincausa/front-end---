@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Disfucionario</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+
+   body { background: #262626; }
+   .breadcrumb {background: #262626; border: 0px solid rgba(56, 56, 56, 1); border-radius: 5px; display: block;}
+    .breadcrumb li {font-size: 14px;}
+    .breadcrumb a {color: rgba(79, 79, 79, 1);}
+    .breadcrumb a:hover {color: rgba(61, 61, 61, 1);}
+    .breadcrumb>.active {color: rgba(255, 255, 255, 1);}
+    .breadcrumb>li+li:before {color: rgba(204, 204, 204, 1); content: "\002F\002F\00a0";}
+    </style>
+    <?php
+
+header('Content-type: application/json');
+echo file_get_contents("http://disfuncionarios.org:3000/api/zone");
+
+?>
+
+   <script>
+
+
+
+$.get( "http://disfuncionarios.org:3000/api/zone", function() {
+    alert( "Funcionó" );
+  })
+  .done(function() {
+    alert( "También sirve para saber que funcionó" );
+  })
+  .fail(function() {
+    alert( "Ha ocurrido un error" );
+  });
+   </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+      <a class="navbar-brand" href="#">Disfuncionarios</a>
+         </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+
+
+
+      <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Contenido
+                    <small>Subtexto</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Raiz</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+
+
+
+
+       
+  <h1 id="faq">Preguntas Frecuentes</h1>
+      
+      <h3 id="pregunta-1">
+        1. Si el familiar o colaborador es corrupto, no necesariamente lo es el candidato. ¿Qué hacemos para no imputar responsabilidades que no les corresponden
+      </h3>
+      <p>
+        Cuidamos los vínculos a través de curaduría (ver pregunta 3 para saber qué implica). Sólo incluimos aquellos casos en los que el actor está involucrado, o bien, que la conducta del colaborador se haya desplegado con anterioridad a su contratación por parte del candidato/funcionario. Esto permite presentar solamente aquella información relevante para efectos de evaluar al personaje. 
+        Más allá de esa selección, no juzgamos el contenido. Es decir, que no calificamos si algo está bien o mal. Esa decisión es del ciudadano que utiliza la plataforma.
+      </p>
+      
+      <h3 id="pregunta-2">
+        2. Algunos medios pueden ser tendenciosos. ¿Cómo lidiamos con esto al presentar la información?
+      </h3>
+      <p>
+        En primer lugar, no generamos contenido, por lo que la información que publicamos está, de cualquier forma, disponible para cualquier lector de medios de comunicación. 
+        En segundo lugar, nuestras fuentes se componen exclusivamente de medios de comunicación. Es decir, excluimos blogs, páginas personales y plataformas de partidos políticos, lo cual evita tomar en cuenta información evidentemente apoyada por una u otra parte. 
+        En tercer lugar, en búsquedas preliminares hemos detectado que las notas más relevantes suelen ser retomadas por diversos medios, a veces desde distintas ópticas, lo cual genera un balance entre plataformas que pueden estar en competencia.
+        En cuarto lugar, en las visualizaciones damos espacio a la réplica cuando ésta existe. Cuando un actor acusado de algo da su versión de los hechos, lo publicamos junto a los demás links, siempre y cuando se siga la misma regla que aplica para las demás notas: que esté publicado en un medio de comunicación con presencia en Internet. 
+      </p>
+      
+      <h3 id="pregunta-3">
+        3. ¿Cómo aseguramos que la plataforma no sea una herramienta para denostar candidatos o favorecer a alguno?
+      </h3>
+      <p>
+        Los candidatos y funcionarios tienen recursos y plataformas para dar a conocer sus logros. Pero no hablan de temas en los que no están bien posicionados y que, sin embargo, le interesan a los ciudadanos. Esta plataforma de salida a esa necesidad de conocer todas las caras públicamente relevantes de los candidatos. 
+        Estamos trabajando en que las herramientas que utilizamos sean de código abierto y la metodología esté bien documentada, con la finalidad de que se puedan no sólo replicar, sino evaluar.
+      </p>
+      
+      <h3 id="pregunta-4">
+        4. ¿Por qué una plataforma que visualiza relaciones negativas sirve a la democracia? ¿No tendrían que proponer algo también? 
+      </h3>
+      <p>
+        Tanto la crítica como la rendición de cuentas es fundamental para la democracia. Ésta es sólo una de las múltiples plataformas creadas por ciudadanos para incidir en la conversación sobre lo público. 
+        Sabemos que el ejercicio democrático no se agota en la transparencia y la rendición de cuentas, pero sin éstas, otras propuestas no pueden articularse adecuadamente. Por otro lado, demeritar este tipo de esfuerzos con el solo argumento de que no proponen nada es subestimar el papel de la crítica. Gracias a ésta, visiones distintas encuentran cabida en las discusiones públicas y ayudan a construir otros mecanismos de participación.
+      </p>
+      
+      <h3 id="pregunta-5">
+        5. ¿Cuáles son nuestros mecanismos de transparencia?
+      </h3>
+      <p>
+        La metodología está publicada en el sitio. Cuando recibamos apoyos institucionales, también lo publicaremos. Hasta ahora no ha sucedido. El código de los motores de búsqueda estará disponible y las tecnologías que utilizamos son abiertas. Esto permite no sólo conocer y evaluar la parte técnica del trabajo, sino también hacerlo replicable. 
+      </p>
+      
+      <h3 id="pregunta-6">
+        6. ¿Quiénes participan en el proyecto? 
+      </h3>
+      <p>
+        Somos ciudadanos sin filiaciones partidistas. En el equipo hay diversidad de perfiles (estudiantes, profesionistas de la tecnología, periodistas, entre otros) y puesto que nuestra filosofía es colaborativa, muchas personas han participado en el proyecto.
+      </p>
+      
+      <h3 id="pregunta-7">
+        7. ¿Qué pasará con el proyecto cuando terminen las elecciones? 
+      </h3>
+      <p>
+        Puesto que se trata de un repositorio de información, éste continuará alimentándose con las nuevas noticias que surjan una vez que los candidatos tomen sus cargos. 
+        Esto tiene dos propósitos. El primero es que la plataforma sirva no ya para obtener información de candidatos, sino para monitorear las relaciones de los nuevos funcionarios. El segundo es que para las próximas elecciones, habrá más información disponible para evaluar a los nuevos candidatos. 
+        El proceso de aprendizaje y la documentación producida en el piloto de Nuevo León permitirá que el proyecto sea replicable tanto en otras entidades federativas como a nivel nacional. 
+        Puesto que quienes son candidatos y serán funcionarios públicos pueden, en un futuro, aspirar a otros puestos de la misma naturaleza, servirá para continuar con la labor de monitoreo en años por venir.
+      </p>
+      
+      <h3 id="pregunta-8">
+        8. ¿Cómo financian el proyecto? 
+      </h3>
+      <p>
+        Todo el trabajo se ha hecho de forma voluntaria, por lo que nadie obtiene un beneficio monetario ni de otra índole. Los gastos de la plataforma han corrido por cuenta de los participantes.
+      </p>
+      
+      <h3 id="pregunta-9">
+        9. ¿Cómo y en qué puedo participar? 
+      </h3>
+      <p>
+        Escríbenos tus ideas a disfuncionarios@gmail.com. Estamos abiertos a propuestas que busquen mejorar la plataforma.
+      </p>
+      
+      <h3 id="pregunta-10">
+        10. Soy periodista y quiero hacerles una entrevista. ¿Dónde puedo contactarlos? 
+      </h3>
+      <p>
+        disfuncionarios@gmail.com 
+      </p>
+
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; México 2015</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
