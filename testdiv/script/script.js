@@ -1,8 +1,16 @@
 $(function() {
 
 
+
    // prueba json
-   // var json = [{"id":0,"name":"juanman"},{"id":0,"name":"juann"}]
+   var json = $.ajax({
+    type: 'GET',
+        url: 'http://disfuncionarios.org:3000/api/zone',
+        dataType: 'json',
+        success: function (data) {
+        console.log(data);
+    }
+});
 
   // template
     $.template('municipioList', '<div><ul><li>${name}</li></ul></div>' );
