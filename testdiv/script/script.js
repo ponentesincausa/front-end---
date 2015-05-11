@@ -4,20 +4,30 @@ $(function() {
 
    // prueba json
    var json = $.ajax({
-    type: 'GET',
-        url: 'http://disfuncionarios.org:3000/api/zone',
-        dataType: 'json',
-        success: function (data) {
-        console.log(data);
-    }
-});
+       url: 'lista.json',
+       dataType: 'json',
+       type: 'get',
+       cache: false,
+       success: function(data){
+           $(data.muncipios).each(function(index, value){
+
+               console.log(value.name)
+
+           })
+
+
+
+
+
+       }
+   });
 
   // template
-    $.template('municipioList', '<div><ul><li>${name}</li></ul></div>' );
+    $.template('municipioList', '<div><li>${name}</li></ul></div>' );
 
 
     for (var i = 0; i <  json.length; i++) {
-        $.tmpl('municipioList', json[i]).appendTo('#municipios');
+        $.tmpl('municipioList', json[i]).appendTo('#muni');
 
 
     }
